@@ -22,5 +22,5 @@ jobs:
       uses: actions/checkout@v2
 
     - name: bob
-      run: echo "You selected ${{ github.events.inputs.python-version }}"
+      run: echo "You selected ${{ github.event.inputs.python-version }}"
   
