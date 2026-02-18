@@ -1,0 +1,25 @@
+name: options options options
+on:
+ workflow_dispatch:
+  inputs:
+    python-version:
+      description: "bob"
+      required: true
+      default: "10"
+      type: choice
+      options:
+      - "10"
+      - "11"
+      - "12"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: bob
+      run: echo "You selected ${{ github.events.inputs.python-version }}"
+  
